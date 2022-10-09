@@ -18,7 +18,7 @@
 
 .friends-screen__channel {
     margin-top:var(--horizontal-space);
-    border-top:1px solid rgba(0,0,0,.2);
+    border-top:var(--main-border);
     padding-top:15px;
 }
 
@@ -28,3 +28,23 @@
     justify-content: space-between;
     color:rgba(0,0,0,.5);
 }
+
+.recommended-friends {
+    margin-bottom:var(--horizontal-space);
+    padding:25px 0;
+    border-bottom:var(--main-border);
+}
+
+.recommended-friends__title {
+    font-size:14px;
+    color:rgba(0,0,0,0.4);
+}
+
+.recommended-friends span {
+    margin:100px 0;
+    display:block;
+    text-align:center;
+    font-size:18px;
+    color:rgba(0,0,0,0.5);
+}
+
