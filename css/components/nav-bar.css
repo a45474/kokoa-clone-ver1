@@ -18,7 +18,43 @@
     position: relative;
 }
 
+@keyframes notificationAnimation {
+    0% {
+        transform: none;
+    }
+    50% {
+        transform: translateY(-5px) rotateY(360deg);
+    }
+    100% {
+        transform: none;
+    }
+}
+
 .nav-notification {
     position:absolute;
     left:15px; bottom:15px;
+    animation: notificationAnimation 3s ease-in-out infinite;
+}
+
+@keyframes appearBtnAnimation {
+    from {
+        
+    }to {
+        transform: none;
+        opacity: 1;
+    }
+}
+
+.nav__li {
+    animation: appearBtnAnimation .8s ease-in-out forwards;
+    opacity: 0; transform: translateY(50px);
+}
+.nav__li:nth-child(2) {
+    animation-delay: .2s;
+}
+.nav__li:nth-child(3) {
+    animation-delay: .5s;
+}
+.nav__li:last-child {
+    animation-delay: .8s;
 }

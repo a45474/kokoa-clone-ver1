@@ -12,12 +12,130 @@
     width:100%;
     box-sizing: border-box;
     background-color:#abc1d1;
+    z-index: 10;
 }
 
 #chat-screen .status-bar {
     background-color:#abc1d1;
+    z-index: 10;
 }
 
 #chat-screen .main-chat {
-    padding-top:140px;
+    padding-top:150px;
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+}
+
+.chat__timestamp {
+    color:white;
+    background-color:#92a4b2;
+    padding:12px 15px;
+    border-radius:25px;
+    font-size:14px;
+    margin-bottom:25px;
+}
+
+.message-row {
+    width:100%;
+    display:flex;
+    margin-bottom:var(--horizontal-space);
+}
+
+.message-row img {
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    margin-right:15px;
+    background-color:#eee;
+}
+
+.message__author, .message__time {
+    opacity: .8;
+    font-size:14px;
+    margin-bottom:10px;
+    display:block;
+}
+
+.message__bubble {
+    background-color:#fff;
+    padding:13px;
+    border-radius:15px;
+    margin-right:5px;
+    border-top-left-radius:0;
+}
+
+.message__info {
+    display: flex;
+    align-items:flex-end;
+}
+
+/* .message-row--own {
+    justify-content:flex-start;
+} */
+
+.message-row--own .message__bubble {
+    background-color: var(--yellow);
+    border-top-right-radius: 0;
+    border-top-left-radius:15px;
+}
+
+.message-row--own {
+    flex-direction: row-reverse;
+}
+
+
+.message-row--own .message__info {
+    flex-direction: row-reverse;
+}
+
+.reply {
+    position:fixed;
+    bottom:0;
+    width:100%;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding:5px 25px;
+    align-items:center;
+    box-sizing: border-box;
+}
+
+.reply .reply__column:first-child {
+    width:10%;
+}
+.reply .reply__column:last-child {
+    width:90%; position:relative;
+}
+.reply input {
+    height:35px;
+    width:100%;
+    border:var(--main-border);
+    border-radius:20px;
+    padding-left:10px;
+    box-sizing: border-box;
+}
+
+.reply__column:last-child > i {
+    right:40px;
+    top:10px;
+    position:absolute;
+    right:45px; top:9px;
+    opacity: .5;
+}
+.reply__column button {
+    background-color:var(--yellow);
+    border:none;
+    width:30px;
+    height:30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right:4px; top:2px;
+    cursor:pointer;
+}
+.reply__column button i {
+    opacity: 1;
 }
